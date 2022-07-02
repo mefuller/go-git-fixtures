@@ -37,7 +37,7 @@ func TestExtractError(t *testing.T) {
 				com, err, test.errRgx)
 		}
 
-		if path != "" {
+		if path != osfs.New("") {
 			if err = os.RemoveAll(path); err != nil {
 				t.Fatalf("%s: cannot remove temp directory: %s", com, err)
 			}
